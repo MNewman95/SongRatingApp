@@ -1,0 +1,148 @@
+﻿
+@model IEnumerable<Playlists>
+
+
+<!--#1 Games of Pleasure
+    #2 Good Ol' Days
+    #3 Game D80's
+    #4 Game Day, Never Forget
+    #5 90's
+    #6 Quarantunes
+    #7 Dont hate the playa hate the Game(Day)
+-->
+<!DOCTYPE
+ html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,
+initial-scale=1">
+    <style>
+        .collapsible {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: 0px solid black;
+            text-align: center;
+            outline: 2px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+            .active, .collapsible:hover {
+                background-color: rgb(115, 212, 250);
+            }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #000000;
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+
+
+    <button type="button" class="collapsible">
+        Games of Pleasure
+        ;)
+    </button>
+    <div class="content">
+        <p>
+            <iframe src="https://open.spotify.com/embed/playlist/4j3Z1DzxEjcjrDz5n0AJ4j"
+                    width="100%" height="450" frameborder="0" allowtransparency="true"
+                    allow="encrypted-media"></iframe>
+        </p>
+    </div>
+    <button type="button" class="collapsible">
+        Good Ol'
+        Days
+    </button>
+    <div class="content">
+        <p>
+            <iframe src="https://open.spotify.com/embed/playlist/4G6E0RI5PWsxL0jaOYNPUJ"
+                    width="100%" height="450" frameborder="0" allowtransparency="true"
+                    allow="encrypted-media"></iframe>
+        </p>
+    </div>
+    <button type="button" class="collapsible">
+        Game
+        D80's
+    </button>
+    <div class="content">
+        <p>
+            <iframe src="https://open.spotify.com/embed/playlist/1c67lInCOUAG6rZWupusEJ"
+                    width="100%" height="450" frameborder="0" allowtransparency="true"
+                    allow="encrypted-media"></iframe>
+        </p>
+    </div>
+    <button type="button" class="collapsible">
+        Game Day, Never
+        Forget
+    </button>
+    <div class="content">
+        <p>
+            <iframe src="https://open.spotify.com/embed/playlist/5nesmzlBfeC97HwAzXg1Xn"
+                    width="100%" height="450" frameborder="0" allowtransparency="true"
+                    allow="encrypted-media"></iframe>
+        </p>
+    </div>
+    <button type="button" class="collapsible">
+        I Did Not Have Sexual
+        Relations With That Game Day
+    </button>
+    <div class="content">
+        <p>
+            <iframe src="https://open.spotify.com/embed/playlist/0WZ0fF1YgCYZr1wpG8r29Y"
+                    width="100%" height="450" frameborder="0" allowtransparency="true"
+                    allow="encrypted-media"></iframe>
+        </p>
+    </div>
+    <button type="button" class="collapsible">
+        Game Day
+        Quarantunes
+    </button>
+    <div class="content">
+        <p>
+            <iframe src="https://open.spotify.com/embed/playlist/3rRdcI7p5KrouQZiu8pQzM"
+                    width="100%" height="450" frameborder="0" allowtransparency="true"
+                    allow="encrypted-media"></iframe>
+        </p>
+    </div>
+    <button type="button" class="collapsible">
+        Don't Hate The PLAYA,
+        Hate The Game(Day)
+    </button>
+    <div class="content">
+        <p>
+            <iframe src="https://open.spotify.com/embed/playlist/6TY75hpWGh7I3AHtSEsZGQ"
+                    width="100%" height="450" frameborder="0" allowtransparency="true"
+                    allow="encrypted-media"></iframe>
+        </p>
+    </div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
