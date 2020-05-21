@@ -1,0 +1,30 @@
+﻿@model Songs
+
+    <h2>@Model.name by @Model.artist</h2>
+
+
+
+@using (Html.BeginForm("InsertRatingToDatabase", "Song", "Post"))
+{
+    <input asp-for="songID" type="hidden" value="@Model.songID" />
+
+
+    <label asp-for="SongRating.userName" class="control-label">User Name</label>
+
+    <input type="text" name="userName" class="form-control" value="" />
+
+    <div class="form-group">
+        <label for="">Select a Rating</label>
+        <select class="form-control" name="ratingValue" value="">
+            @foreach (var rating in Model.SongRating.Range)
+            {
+
+                <option value="@rating">@rating </option>
+
+            }
+        </select>
+    </div>
+
+    <input type="submit" value="Rate this Song" class="btn btn-primary" />
+
+}

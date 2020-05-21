@@ -12,5 +12,7 @@ namespace SongRatingApp.Models
         public string artist { get; set; }
         public int playlistID { get; set; }
         public int rating { get; set; }
+
+        public Rating SongRating { get; set; }
     }
 }

@@ -25,5 +25,16 @@ namespace SongRatingApp
         {
             return _conn.Query<Playlists>("SELECT * FROM Playlists;");
         }
+
+        public Songs GetSong(int songID)
+        {
+            return _conn.QuerySingle<Songs>("SELECT * FROM Songs WHERE SongID = @songID", new { songID = songID });
+        }
+
+        public void InsertRating(Rating rating)
+        {
+            _conn.Execute("INSERT INTO ratings (songID, userName, ratingValue) VALUES (@songID, @userName, @ratingValue);",
+                new { songID = rating.songID, userName = rating.userName, ratingValue = rating.ratingValue });
+        }
     }
 }

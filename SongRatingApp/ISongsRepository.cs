@@ -10,5 +10,7 @@ namespace SongRatingApp
     {
         public IEnumerable<Songs> GetAllSongs();
         public IEnumerable<Playlists> GetAllPlaylists();
+        public Songs GetSong(int songID);
+        public void InsertRating(Rating rating);
     }
 }
