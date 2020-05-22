@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using SongRatingApp.Models;
 
 namespace SongRatingApp.Controllers
 {
@@ -33,6 +34,26 @@ namespace SongRatingApp.Controllers
             var songs = repo.GetAllSongs();
 
             return View(songs);
+        }
+
+        public IActionResult InsertRating(int id)
+        {
+            var song = repo.GetSong(id);
+
+            var valueRange = new List<int>() { 1, 2, 3, 4, 5 };
+
+            song.SongRating = new Rating();
+
+            song.SongRating.Range = valueRange;
+
+            return View(song);
+        }
+
+        public IActionResult InsertRatingToDatabase(Rating rating)
+        {
+            repo.InsertRating(rating);
+
+            return RedirectToAction("Songs");
         }
     }
 }
