@@ -5,10 +5,10 @@
 <table class="table">
     <tr>
         <th>Rate this song</th>
+        <th>Rating</th>
         <th>Name</th>
         <th>Artist</th>
         <th>Playlist</th>
-        <th>Rating</th>
         <th>Song ID</th>
     </tr>
 
@@ -16,10 +16,10 @@
     {
 <tr>
     <td><a href=/Song/InsertRating/@song.songID>Rate me</a></td>
+    <td>@song.AverageRating </td>
     <td>@song.name</td>
     <td>@song.artist</td>
-    <td>@song.playlistID</td>
-    <td>@song.rating</td>
+    <td>@song.PlaylistName</td>
     <td>@song.songID</td>
 </tr>
         <!--<a href=/Product/ViewProduct/product.ProductID>product.ProductID</a>-->

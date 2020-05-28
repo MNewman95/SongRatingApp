@@ -13,7 +13,8 @@ namespace SongRatingApp
         public IEnumerable<Playlists> GetAllPlaylists();
         public void InsertRating(Rating rating);
         public Songs GetSong(int SongID);
-        
+        public Songs GetAvg(int SongID);
+       // public Playlists PlaylistName(int SongID);
         
     }
 }
