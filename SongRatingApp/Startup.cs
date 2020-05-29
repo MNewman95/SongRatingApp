@@ -27,7 +27,7 @@ namespace SongRatingApp
         {
             services.AddScoped<IDbConnection>((s) =>
             {
-                IDbConnection conn = new MySqlConnection(Configuration.GetConnectionString("SongRatingApp"));
+                IDbConnection conn = new MySqlConnection(Configuration.GetConnectionString("Azure"));
                 conn.Open();
                 return conn;
             });

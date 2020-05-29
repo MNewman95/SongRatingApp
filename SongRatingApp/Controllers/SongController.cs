@@ -34,16 +34,8 @@ namespace SongRatingApp.Controllers
             var songs = repo.GetAllSongs();
             foreach (var x in songs)
             {
-                try
-                {
-                    var rating = repo.GetAvg(x.songID);
-                    x.AverageRating = rating.AverageRating;
-                }
-                catch (Exception e)
-                {
-                   
-                }
-
+                   x.AverageRating = repo.GetAvg(x.songID);
+                
             }
 
 

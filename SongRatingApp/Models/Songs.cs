@@ -15,6 +15,6 @@ namespace SongRatingApp.Models
         public int rating { get; set; }
 
         public Rating SongRating { get; set; }
-        public double AverageRating { get; set; }
+        public double AverageRating { get; set; } 
     }   
 }
